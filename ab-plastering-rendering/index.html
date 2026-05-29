@@ -1,0 +1,927 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>A.B PLASTERING &amp; RENDERING | Expert Plastering & Rendering</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="A.B PLASTERING &amp; RENDERING - Expert Plastering & Rendering. Serving Birmingham. Call 07864 670314." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #455a64;
+            --accent: #ff8a65;
+            --dark: #1c2a30;
+            --light: #fbe9e7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #333;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ===== STICKY NAV ===== */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.8em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .sticky-nav .nav-brand {
+            font-weight: 800;
+            font-size: 1.1em;
+            color: var(--primary);
+        }
+        .sticky-nav .nav-links {
+            display: flex;
+            gap: 1.5em;
+            list-style: none;
+            align-items: center;
+        }
+        .sticky-nav .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: color 0.2s;
+        }
+        .sticky-nav .nav-links a:hover { color: var(--accent); }
+        .sticky-nav .nav-phone {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.5em 1.2em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .sticky-nav .nav-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(160deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1600&q=80') center/cover no-repeat;
+            background-attachment: fixed;
+            padding: 2em;
+        }
+        .hero-content {
+            max-width: 800px;
+            animation: heroFadeIn 1.2s ease-out;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 0.3em;
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+        .hero .cta-group {
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1em 2.5em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.8);
+            padding: 0.8em 2em;
+            white-space: nowrap;
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== TRUST STRIP ===== */
+        .trust-strip {
+            background: var(--dark);
+            padding: 1.5em 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .trust-item .icon { color: var(--accent); }
+
+        /* ===== SECTIONS ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2em;
+        }
+        .section-light {
+            background: #fff;
+            padding: 5em 2em;
+        }
+        .section-tinted {
+            background: var(--light);
+            padding: 5em 2em;
+        }
+        .section-dark {
+            background: var(--dark);
+            padding: 5em 2em;
+            color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 0.3em;
+            color: inherit;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 3em;
+        }
+        .section-dark .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4em;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 0.5em;
+        }
+        .about-text p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5em;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* ===== STATS COUNTER ===== */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 4em 2em;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 4em;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            color: #fff;
+        }
+        .stat-number {
+            font-size: 3em;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+        }
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.8;
+            margin-top: 0.3em;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5em 2em;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2em;
+            font-size: 1.5em;
+            color: var(--accent);
+            transition: all 0.3s;
+        }
+        .service-card:hover .service-icon {
+            background: var(--accent);
+            color: #fff;
+            transform: scale(1.1);
+        }
+        .service-card h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 0.6em;
+        }
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        /* ===== GALLERY CAROUSEL ===== */
+        .gallery-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .gallery-slide {
+            display: none;
+        }
+        .gallery-slide.active { display: block; }
+        .gallery-slide img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-prev, .gallery-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .gallery-prev { left: 1em; }
+        .gallery-next { right: 1em; }
+        .gallery-prev:hover, .gallery-next:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+        .gallery-dots {
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.5));
+        }
+        .gallery-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .gallery-dot.active { background: var(--accent); transform: scale(1.3); }
+
+        /* ===== REVIEWS ===== */
+        .reviews-carousel {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .review-slide {
+            display: none;
+            text-align: center;
+            padding: 2em;
+        }
+        .review-slide.active { display: block; animation: fadeIn 0.5s; }
+        .review-stars { margin-bottom: 1em; font-size: 1.3em; }
+        .review-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #444;
+            font-style: italic;
+            margin-bottom: 1.5em;
+        }
+        .section-dark .review-text { color: rgba(255,255,255,0.85); }
+        .review-author {
+            font-weight: 700;
+            color: #333;
+        }
+        .section-dark .review-author { color: #fff; }
+        .review-time { font-weight: 400; opacity: 0.6; margin-left: 0.5em; }
+        .carousel-nav {
+            text-align: center;
+            margin-top: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8em;
+        }
+        .carousel-prev, .carousel-next {
+            background: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.8);
+            width: 36px !important;
+            height: 36px !important;
+            min-width: 36px;
+            min-height: 36px;
+            max-width: 36px;
+            max-height: 36px;
+            border-radius: 50% !important;
+            padding: 0 !important;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            line-height: 1;
+        }
+        .section-light .carousel-prev, .section-light .carousel-next,
+        .section-tinted .carousel-prev, .section-tinted .carousel-next {
+            border-color: #ddd;
+            color: #555;
+        }
+        .carousel-prev:hover, .carousel-next:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        .carousel-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            margin: 0 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .section-light .carousel-dot, .section-tinted .carousel-dot { background: #ddd; }
+        .carousel-dot.active { background: var(--accent); transform: scale(1.4); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+        .form-row.full { grid-template-columns: 1fr; }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1em 1.3em;
+            border: 2px solid #ddd;
+            border-radius: 8px !important;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #fff;
+            color: #333;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+            opacity: 1;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(245,166,35,0.1);
+            background: #fff;
+        }
+        .contact-form textarea { resize: vertical; min-height: 120px; }
+        .btn-submit {
+            width: 100%;
+            padding: 1.1em;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* ===== MAP ===== */
+        .map-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 4em 2em 2em;
+        }
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3em;
+        }
+        .footer-grid h4 {
+            color: #fff;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        .footer-grid ul { list-style: none; padding: 0; }
+        .footer-grid li { margin-bottom: 0.5em; font-size: 0.9em; }
+        .footer-grid a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-grid a:hover { color: var(--accent); }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            opacity: 0.6;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .sticky-nav .nav-links { display: none; }
+            .about-grid { grid-template-columns: 1fr; gap: 2em; }
+            .services-grid { grid-template-columns: 1fr; }
+            .stats-grid { gap: 2em; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2em; }
+            .hero { background-attachment: scroll; }
+            .gallery-slide img { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Banner -->
+    <div style="background:#ff4444;color:#fff;text-align:center;padding:0.6em 1em;font-size:0.85em;font-weight:700;position:fixed;top:0;left:0;right:0;z-index:1100;letter-spacing:0.5px;">
+        DEMO &amp; TESTING PURPOSES ONLY — This is a preview website, not yet live.
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" style="top:36px;">
+        <span class="nav-brand">A.B PLASTERING &amp; RENDERING</span>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:07864 670314" class="nav-phone"><span class="icon solid fa-phone"></span> 07864 670314</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A.B PLASTERING &amp; RENDERING</h1>
+            <p class="tagline">Expert Plastering & Rendering<br>Serving Northfield, Birmingham &amp; surrounding areas</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+                <a href="tel:07864 670314" class="btn btn-outline"><span class="icon solid fa-phone"></span> Call Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-item">
+            <span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span>
+            <span>5/5 on Google</span>
+        </div>
+        <div class="trust-item">
+            <span class="icon solid fa-users"></span>
+            <span>77+ Happy Customers</span>
+        </div>
+        <div class="trust-item">
+            <span class="icon solid fa-shield-alt"></span>
+            <span>Fully Insured</span>
+        </div>
+        <div class="trust-item">
+            <span class="icon solid fa-clock"></span>
+            <span>Fast Response</span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section-light fade-in">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Your Trusted Local Plasterer</h2>
+                    <p>We provide professional plasterer services across Northfield, Birmingham and the surrounding areas.
+                    Our customers rate us <strong>5/5 stars</strong> on Google from 77 reviews —
+                    a testament to our commitment to quality work and excellent customer service.</p>
+                    <p>Whether it's a small repair or a large project, we treat every job with the same care and attention to detail.</p>
+                    <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v-UuhF2S7E-rj3GVcR638MKKBeK638BKBRPBX4ubxE4b_9GiDKocilCkskDKqqtcdT3i1pG8DxmZvdTiQAmqSItm-LXhlKL_xLLYSQNQ-ROruBj_eq80-u0V3jghFlPSAOQYVfcorFks2AsO5xyhz9L6Qj3TFkGzKacYtSQ94IWcC-ha_RU9mLgYGWh2R-23sFJln59mJrv8411hEUC5fP6S6wIQiMebXtaA1-KZTdiUVfS5K5J5mgTIDwYrCHaLQbJ5WBjWuLd_GhPtqnm9FB4a0_gSlgMUExLNXjwO9dHw&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="stats-section fade-in">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="77">0</span>
+                <span class="stat-label">Google Reviews</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span>
+                <span class="stat-label">% Satisfaction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="5">0</span>
+                <span class="stat-label">Star Rating</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="24">0</span>
+                <span class="stat-label">Hour Response</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-tinted fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional solutions for all your plasterer needs</p>
+            <div class="services-grid">
+                
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <span class="icon solid fa-fill-drip"></span>
+                </div>
+                <h3>Skimming</h3>
+                <p>Smooth, flawless skim coats over old plaster and plasterboard.</p>
+            </div>
+        
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <span class="icon solid fa-home"></span>
+                </div>
+                <h3>Rendering</h3>
+                <p>External rendering in monocouche, sand & cement, and silicone finishes.</p>
+            </div>
+        
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <span class="icon solid fa-border-style"></span>
+                </div>
+                <h3>Coving</h3>
+                <p>Decorative coving and cornice fitting to add character to any room.</p>
+            </div>
+        
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <span class="icon solid fa-th-large"></span>
+                </div>
+                <h3>Dry Lining</h3>
+                <p>Plasterboard fitting and dot-and-dab for new walls and insulation.</p>
+            </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    
+            <section id="gallery" class="section-dark fade-in">
+                <div class="container">
+                    <h2 class="section-title">Our Work</h2>
+                    <div class="gallery-carousel">
+                        <div class="gallery-slide active" data-index="0"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v-UuhF2S7E-rj3GVcR638MKKBeK638BKBRPBX4ubxE4b_9GiDKocilCkskDKqqtcdT3i1pG8DxmZvdTiQAmqSItm-LXhlKL_xLLYSQNQ-ROruBj_eq80-u0V3jghFlPSAOQYVfcorFks2AsO5xyhz9L6Qj3TFkGzKacYtSQ94IWcC-ha_RU9mLgYGWh2R-23sFJln59mJrv8411hEUC5fP6S6wIQiMebXtaA1-KZTdiUVfS5K5J5mgTIDwYrCHaLQbJ5WBjWuLd_GhPtqnm9FB4a0_gSlgMUExLNXjwO9dHw&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING work 1" /></div><div class="gallery-slide " data-index="1"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-teUWbDZEmBSeDqjLJxoBjaDxDBZRb2n21YgTlc5pIOCo-qaHOC7_qh419u59VNwab9BUVFuOIV_owX4L9s-zN9gVXPG1Nhv56JOp-ZXBbV-FTa1GSCoqnoNzTR0tCb5we9NPMR0NdPZ0eooIO1JRllmCI4RIlxxz4LxdxApvjEz4h_anJ5q7AEqBcZweFEcZi42SH9nKDvDEj-iNoPE4WqkH24HaxTnIJn7CgR8voY3G72i1py6MwlmFow6p4rJ_8Xnw9H4q_29ulN0Hh6I5GS_EANxj2TVfID_FQyBbjU9A&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING work 2" /></div><div class="gallery-slide " data-index="2"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sGO7MbrMA0tm2WC-Ux6fw-OxAN6iRawHWta7oB4mzZBAYEEWD5xnaeoZY-DnTZKJbNa7oluIaahmSu0BXrnDWsJLOU97GtAxQ2uLGZp7tMnGxjMy3vByH6Sw3r6MqmYOEfGHesGjiMGDttHXaXjn1vbg_0GDtV1b5KUBo_qinzFSrYi8r3YrsSk7QU2AWUIA6wU2nkp1zGufEpH3qvkV4xhUzrZVBipWozeMobazKclYPuf6-XZjSkCB6gmV4FHLwP9ork18ahmpk2jDaCeFgYBn3QZhexOGtvLx5JOXJbWg&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING work 3" /></div><div class="gallery-slide " data-index="3"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tY59ULkc3zvw00KKZkLXMHGO_rtKwoXu0YTV3mrRMJC8o-NStVWQR3sk-B31b5I8RiTbmKFn_z_4hr4nrYnLlslNL_QVxf495vD0JCifqKoPUiLBFsLGnJVkbMotrrd6RPmigV2v37u3N01wmX39HtHBRuhUvR09LcckrCFuHFzK1wjOhtvzQ7qC22mUV_xUdKFoPobytAWu-VzcrKtjcuraOfm29gOakeZ_ko-TxI7N5koBgndYSSUvyr_iNRBglOWtBOXhX5SPSec1i6brW0AUCY7ArOwzds6J-x-ozTlg&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING work 4" /></div><div class="gallery-slide " data-index="4"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v7MzHiK9_fpmxIXlnmnSdGlUdJSqMtASiFO3OGvdUtW4M4e2M7__7sgzNU48jvcZXrIljH5sAOkex2fzvQxMaCbcMQpLcOeMMgdpYgvy0HGA6g60_XI_6P3JQ9mgw9UH9uYpCCRqnRsXCXS-H7-VAcGFowriRJR9DSImd4QOORibboKRA4J08vm-uLN4bMsPNtVolHEpoIT48nqTmaGDeyACxnA8jyll6xwYR2mSSGht0cShnxw1NHKG7O2drSWmI_qgUJjc-VHEritEh6WmHErwZXd2xVijhNdvexqpP9lg&key=AIzaSyALhwc_Au67HxWrh13h3Pjnf4fm0701zYQ" alt="A.B PLASTERING &amp; RENDERING work 5" /></div>
+                        <button class="gallery-prev"><span class="icon solid fa-chevron-left"></span></button>
+                        <button class="gallery-next"><span class="icon solid fa-chevron-right"></span></button>
+                        <div class="gallery-dots"><span class="gallery-dot active" data-index="0"></span><span class="gallery-dot " data-index="1"></span><span class="gallery-dot " data-index="2"></span><span class="gallery-dot " data-index="3"></span><span class="gallery-dot " data-index="4"></span></div>
+                    </div>
+                </div>
+            </section>
+        
+
+    <!-- Reviews -->
+    <section id="reviews" class="section-dark fade-in">
+        <div class="container">
+            <h2 class="section-title" style="color:#fff;">What Our Customers Say</h2>
+            <p class="section-subtitle"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span> Rated 5/5 from 77 reviews</p>
+            
+            <div class="reviews-carousel">
+                
+                <div class="review-slide active" data-index="0">
+                    <div class="review-stars"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span></div>
+                    <p class="review-text">"Adam first came to our rescue when we needed a very poor job rectifying.
+He promptly returned our call and was able to complete the job quickly and to an excellent standard.
+He has since returned and carried out additional plastering jobs for us, working effectively alongside other trades people that we also had on the job.
+Work was completed in a timely manner and with a pleasant manner.
+I would throughly recommend Adam for both big and small jobs."</p>
+                    <p class="review-author">— johanna walkley <span class="review-time">8 months ago</span></p>
+                </div>
+            
+                <div class="review-slide " data-index="1">
+                    <div class="review-stars"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span></div>
+                    <p class="review-text">"Adam has just finished plastering my entire home and I couldn’t be happier with the results. From the moment he started, Adam worked tirelessly and demonstrated an incredible work ethic. His attention to detail is impressive, and the finish on my walls is absolutely flawless.
+
+What really stood out was Adam&#x27;s dedication to cleanliness; he made sure to clean up thoroughly at the end of each day, leaving my home neat and tidy. He truly went above and beyond to ensure his work was immaculate. If you’re looking for a skilled plasterer who takes pride in their craft, I highly recommend Adam.
+If I could give more stars I would!"</p>
+                    <p class="review-author">— Carla Powell <span class="review-time">9 months ago</span></p>
+                </div>
+            
+                <div class="review-slide " data-index="2">
+                    <div class="review-stars"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span></div>
+                    <p class="review-text">"I contacted Adam after reading the reviews on google. Must say, he does live up to the 5 star reputation. Great in communication, punctual with the timeline, fair price and quality of work was excellent. To add further, really soft spoken and pays extra attention to customer&#x27;s request. He tidied up everything and was very respectful. Thanks Adam!"</p>
+                    <p class="review-author">— NAZIM ZAHIR <span class="review-time">4 months ago</span></p>
+                </div>
+            
+                <div class="review-slide " data-index="3">
+                    <div class="review-stars"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span></div>
+                    <p class="review-text">"Kitchen ceiling completed by adam, amazing job done on a non working day for adam but didn&#x27;t want to let me down. Was all completed in 4-5 hours too. Really nice guy and will 100% be recommending to family and friends."</p>
+                    <p class="review-author">— Shane Karmali <span class="review-time">2 months ago</span></p>
+                </div>
+            
+                <div class="review-slide " data-index="4">
+                    <div class="review-stars"><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span><span class="icon solid fa-star" style="color:#ff8a65;"></span></div>
+                    <p class="review-text">"We have booked Adam twice now To plaster to different rooms in our house. And have been very pleased with the jobs he has done.  he left everywhere spotless after he had finished.  Would highly recommend, Every time he’s  been Adam has done a fantastic job, And will be booking him in the future."</p>
+                    <p class="review-author">— Sarah Whitehead <span class="review-time">4 months ago</span></p>
+                </div>
+            
+                <div class="carousel-nav">
+                    <button class="carousel-prev"><span class="icon solid fa-chevron-left"></span></button>
+                    <span class="carousel-dot active" data-index="0"></span><span class="carousel-dot " data-index="1"></span><span class="carousel-dot " data-index="2"></span><span class="carousel-dot " data-index="3"></span><span class="carousel-dot " data-index="4"></span>
+                    <button class="carousel-next"><span class="icon solid fa-chevron-right"></span></button>
+                </div>
+            </div>
+        
+            <div style="text-align:center; margin-top:2em;">
+                <a href="https://maps.google.com/?cid=3629943854985052548" class="btn btn-outline" target="_blank">View All Reviews on Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Get a Free Quote</h2>
+            <p class="section-subtitle">Tell us what you need and we'll get back to you quickly</p>
+            <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Your Phone Number" />
+                    <input type="text" name="postcode" placeholder="Your Postcode" />
+                </div>
+                <div class="form-row full">
+                    <textarea name="message" placeholder="Describe what you need help with..." required></textarea>
+                </div>
+                <div class="form-row full">
+                    <button type="submit" class="btn-submit">Send Enquiry <span class="icon solid fa-arrow-right"></span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map -->
+    
+        <section id="map" class="section-light fade-in">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://maps.google.com/maps?q=11%20Ardley%20Rd%2C%20Birmingham%20B14%204AH%2C%20UK&output=embed"
+                        width="100%" height="400" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h4>A.B PLASTERING &amp; RENDERING</h4>
+                <p style="font-size:0.9em; line-height:1.6;">Your trusted local plasterer in Birmingham. Quality workmanship and reliable service, every time.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><span class="icon solid fa-phone" style="color:var(--accent);"></span> <a href="tel:07864 670314">07864 670314</a></li>
+                    <li><span class="icon solid fa-map-marker-alt" style="color:var(--accent);"></span> 11 Ardley Rd, Birmingham B14 4AH, UK</li>
+                </ul>
+                <div class='footer-hours'><h4>Opening Hours</h4><ul><li>Monday: Open 24 hours</li><li>Tuesday: Open 24 hours</li><li>Wednesday: Open 24 hours</li><li>Thursday: Open 24 hours</li><li>Friday: Open 24 hours</li><li>Saturday: Open 24 hours</li><li>Sunday: Open 24 hours</li></ul></div>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li>Skimming</li><li>Rendering</li><li>Coving</li><li>Dry Lining</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; A.B PLASTERING &amp; RENDERING. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+    // Scroll animations
+    (function() {
+        var faders = document.querySelectorAll('.fade-in');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        faders.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // Animated counters
+    (function() {
+        var counters = document.querySelectorAll('.stat-number');
+        var started = false;
+        var observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting && !started) {
+                started = true;
+                counters.forEach(function(counter) {
+                    var target = parseInt(counter.dataset.target);
+                    var duration = 2000;
+                    var start = 0;
+                    var startTime = null;
+                    function animate(ts) {
+                        if (!startTime) startTime = ts;
+                        var progress = Math.min((ts - startTime) / duration, 1);
+                        var eased = 1 - Math.pow(1 - progress, 3);
+                        counter.textContent = Math.floor(eased * target);
+                        if (progress < 1) requestAnimationFrame(animate);
+                        else counter.textContent = target;
+                    }
+                    requestAnimationFrame(animate);
+                });
+            }
+        }, { threshold: 0.3 });
+        if (counters.length) observer.observe(counters[0].parentElement.parentElement);
+    })();
+
+    // Reviews carousel
+    (function() {
+        var slides = document.querySelectorAll('.review-slide');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var current = 0;
+        function show(idx) {
+            slides.forEach(function(s){ s.classList.remove('active'); });
+            dots.forEach(function(d){ d.classList.remove('active'); });
+            if (slides[idx]) slides[idx].classList.add('active');
+            if (dots[idx]) dots[idx].classList.add('active');
+            current = idx;
+        }
+        var prev = document.querySelector('.carousel-prev');
+        var next = document.querySelector('.carousel-next');
+        if (prev) prev.addEventListener('click', function(e){ e.preventDefault(); show((current - 1 + slides.length) % slides.length); });
+        if (next) next.addEventListener('click', function(e){ e.preventDefault(); show((current + 1) % slides.length); });
+        dots.forEach(function(d){ d.addEventListener('click', function(){ show(parseInt(this.dataset.index)); }); });
+        setInterval(function(){ if(slides.length > 1) show((current + 1) % slides.length); }, 6000);
+    })();
+
+    // Gallery carousel
+    (function() {
+        var slides = document.querySelectorAll('.gallery-slide');
+        var dots = document.querySelectorAll('.gallery-dot');
+        var current = 0;
+        function show(idx) {
+            slides.forEach(function(s){ s.classList.remove('active'); });
+            dots.forEach(function(d){ d.classList.remove('active'); });
+            if (slides[idx]) slides[idx].classList.add('active');
+            if (dots[idx]) dots[idx].classList.add('active');
+            current = idx;
+        }
+        var prev = document.querySelector('.gallery-prev');
+        var next = document.querySelector('.gallery-next');
+        if (prev) prev.addEventListener('click', function(e){ e.preventDefault(); show((current - 1 + slides.length) % slides.length); });
+        if (next) next.addEventListener('click', function(e){ e.preventDefault(); show((current + 1) % slides.length); });
+        dots.forEach(function(d){ d.addEventListener('click', function(){ show(parseInt(this.dataset.index)); }); });
+        setInterval(function(){ if(slides.length > 1) show((current + 1) % slides.length); }, 5000);
+    })();
+    </script>
+
+</body>
+</html>
